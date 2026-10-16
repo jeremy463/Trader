@@ -1,0 +1,9 @@
+*.db
+*.db-wal
+*.db-shm
+*.log
+apex_state.json
+apex_journal.jsonl
+/etc/
+.env
+__pycache__/

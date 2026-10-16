@@ -1,0 +1,34 @@
+[Unit]
+Description=APEX web service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=apex
+Group=apex
+WorkingDirectory=/opt/apex_trader
+EnvironmentFile=/etc/apex/env
+ExecStart=/opt/apex_trader/.venv/bin/python -m apex.cli --config /etc/apex/web.json web-serve
+Restart=always
+RestartSec=3
+TimeoutStopSec=20
+StateDirectory=apex
+LogsDirectory=apex
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+ReadWritePaths=/var/lib/apex /var/log/apex /var/backups/apex
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=1G
+
+[Install]
+WantedBy=multi-user.target

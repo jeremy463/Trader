@@ -1,0 +1,11 @@
+# Replace app.YOUR-DOMAIN. Caddy obtains and renews the TLS certificate automatically (ports 80/443 must be open).
+app.YOUR-DOMAIN {
+    encode gzip
+    request_body { max_size 300KB }
+    reverse_proxy 127.0.0.1:8080 {
+        header_up X-Forwarded-For {remote_host}
+    }
+    header {
+        -Server
+    }
+}

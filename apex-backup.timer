@@ -1,0 +1,8 @@
+[Unit]
+Description=Daily APEX database backup
+[Timer]
+OnCalendar=*-*-* 02:30:00 UTC
+Persistent=true
+RandomizedDelaySec=300
+[Install]
+WantedBy=timers.target

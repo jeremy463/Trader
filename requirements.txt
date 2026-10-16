@@ -1,0 +1,2 @@
+# The application itself uses only the Python standard library. This is the whole dependency list.
+tzdata>=2024.1        # DST-correct trading sessions (pure data package)

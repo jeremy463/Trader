@@ -1,0 +1,8 @@
+[Unit]
+Description=APEX database backup
+[Service]
+Type=oneshot
+User=apex
+Group=apex
+EnvironmentFile=-/etc/apex/backup.env
+ExecStart=/opt/apex_trader/deploy/backup.sh

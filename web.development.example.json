@@ -1,0 +1,11 @@
+{
+  "production": false,
+  "base_url": "http://127.0.0.1:8080",
+  "db_path": "./dev/apex_web.db",
+  "log_path": "./dev/apex_web.log",
+  "feed_type": "csv",
+  "data_dir": "./dev/market_data",
+  "feed_symbols": [
+    "EURUSD"
+  ]
+}

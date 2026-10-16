@@ -1,0 +1,43 @@
+{
+  "production": true,
+  "base_url": "https://app.YOUR-DOMAIN",
+  "secure_cookies": true,
+  "trusted_proxy": true,
+  "host": "127.0.0.1",
+  "port": 8080,
+  "trusted_proxies": ["127.0.0.1", "::1"],
+
+  "brand_name": "APEX Trader",
+  "company_name": "YOUR LEGAL ENTITY NAME",
+  "support_email": "support@YOUR-DOMAIN",
+  "legal_jurisdiction": "YOUR COUNTRY / GOVERNING LAW",
+  "legal_updated": "YYYY-MM-DD",
+  "legal_reviewed": false,
+  "refund_policy": "",
+
+  "db_path": "/var/lib/apex/apex_web.db",
+  "log_path": "/var/log/apex/web.log",
+  "edge_path": "/var/lib/apex/apex_edge.json",
+  "backup_dir": "/var/backups/apex",
+
+  "currency": "NGN",
+  "price_kobo": {"pro": 0, "elite": 0},
+  "paystack_webhook_ips": [],
+
+  "feed_type": "oanda",
+  "feed_fallback_type": "twelvedata",
+  "feed_symbols": ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD", "USDCHF", "NZDUSD"],
+  "oanda_account": "YOUR-OANDA-ACCOUNT-ID",
+  "oanda_practice": true,
+
+  "smtp_host": "smtp.YOUR-PROVIDER",
+  "smtp_port": 587,
+  "smtp_user": "YOUR-SMTP-USER",
+  "smtp_from": "YOUR BRAND <no-reply@YOUR-DOMAIN>",
+  "smtp_security": "starttls",
+
+  "news_enabled": true,
+  "news_interval_minutes": 15,
+  "alerts_interval_seconds": 60,
+  "trading_config": ""
+}

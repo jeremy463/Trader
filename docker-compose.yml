@@ -1,0 +1,19 @@
+# Template (not run in the build environment). The app is NOT published; only Caddy (TLS) is.
+services:
+  app:
+    build: ..
+    restart: unless-stopped
+    env_file: /etc/apex/env
+    volumes: ["apex-data:/data"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    cap_drop: ["ALL"]
+    security_opt: ["no-new-privileges:true"]
+    expose: ["8080"]
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    volumes: ["./Caddyfile.docker:/etc/caddy/Caddyfile:ro", "caddy-data:/data"]
+    depends_on: [app]
+volumes: {apex-data: {}, caddy-data: {}}

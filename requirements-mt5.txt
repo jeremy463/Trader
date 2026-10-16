@@ -1,0 +1,2 @@
+# Only for the optional admin trading panel connected to a MetaTrader 5 terminal (Windows)
+MetaTrader5>=5.0.45

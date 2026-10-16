@@ -1,0 +1,7 @@
+{
+  "risk": {"equity": 10000, "risk_per_trade_pct": 0.25, "max_daily_loss_pct": 1.0, "max_weekly_loss_pct": 3.0, "max_drawdown_pct": 8.0},
+  "exec": {"mode": "APPROVAL_REQUIRED", "allowed_instruments": ["EURUSD"], "allowed_sessions_utc": [[7, 20]]},
+  "feed": {"type": "oanda", "symbol": "EURUSD", "tf_minutes": 15, "oanda_account": "YOUR-OANDA-ACCOUNT-ID", "oanda_practice": true},
+  "broker": {"type": "paper", "commission_per_lot": 0.0, "slippage": 0.0},
+  "server": {"state_path": "/var/lib/apex/trading_state.json", "journal_path": "/var/lib/apex/trading_journal.jsonl", "log_path": "/var/log/apex/trading.log", "events_path": ""}
+}
