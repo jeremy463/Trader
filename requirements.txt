@@ -1,2 +1,9 @@
 # The application itself uses only the Python standard library. This is the whole dependency list.
+# tzdata is required for timezone-aware trading session calculations (pure data package).
+# gunicorn is provided as a convenient production WSGI runner for users who prefer it over the
+# builtin lightweight ThreadingHTTPServer. The Dockerfile and systemd unit use the stdlib server,
+# but many deployments call `gunicorn -k gthread apex.server:serve` — include it so deployments
+# that expect `gunicorn` don't fail with "command not found".
+
 tzdata>=2024.1        # DST-correct trading sessions (pure data package)
+gunicorn>=20.1
